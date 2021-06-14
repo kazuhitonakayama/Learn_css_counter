@@ -1,0 +1,9 @@
+.list__wrapper {
+  counter-reset: index;
+  list-style-type: none;
+}
+
+.list__wrapper li::before {
+  counter-increment: index;
+  content: "Section " counters(index,"-") ":"; /* 第2引数は、海藻がネストになっている時に、どう数字を区切るかを規定できる。今回ならば 2-1とか3-2とかという風になる */
+}
